@@ -1,0 +1,91 @@
+
+<!--index.wxml-->
+<view class="page">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item.photo}}" class="slide-image" width="100%" height="180" bindtap="bannergo" data-type="{{item.type}}" data-action="{{item.action}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+ <view class="er">
+<!--定位-->
+   <view class="dingwei">
+   <view class="sb"  bindtap="getLocation">
+     <image mode="aspectFit" src="http://omh7cqphx.bkt.clouddn.com/NAVIGATION_32px.png" class="im"></image> {{address}}
+     </view>
+   </view>
+<!--搜索-->
+<view class="sousuo" bindtap="suo">
+   <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <!--<input type="text" class="weui-search-bar__input" placeholder="请输入搜索内容" disabled="true"/>-->
+                    <text class="weui-search-bar__input">点击进行搜索产品</text>
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+            </view>
+   </view>
+</view>
+
+
+</view> 
+<!--分类-->
+  <!-- <view class="df nav">
+    <view class="df_1" bindtap="{{item.ptype}}" wx:for="{{first}}">
+        <image src="{{item.photo}}"></image>
+        {{item.name}}
+    </view>
+  </view> -->
+
+  <view class=" nav"  >
+    <view wx:for="{{proCat}}" class="nav_big" data-id="{{item.id}}" data-text="{{item.name}}" bindtap="dele">
+        <image src="{{item.bz_1}}"></image>     
+        <text>{{item.name}}</text>  
+    </view>
+  </view>
+  <!--推荐内容开始-->
+<view class="name" bindtap="gotobrand">
+   <i>品牌街</i>
+   <i class="brandclick">></i>
+</view>
+<!--横滑动-->  
+<scroll-view scroll-x="true" class="sc">
+ <view class="one" wx:for="{{brand}}" data-id="{{item.id}}" bindtap='jj'> 
+    <image src="{{item.photo}}"></image>
+ </view> 
+</scroll-view>
+
+ <view class="cont">
+  <navigator  url="../product/detail?productId={{item.id}}" hover-class="changestyle" wx:for="{{productData}}">
+      <image class="cont_image" src="{{item.photo_x}}"></image>
+      <view class="title" style="overflow:hidden;">{{item.name}} </view>
+      <!--<view class="tit">{{item.intro}} </view>-->
+      <view class="gmxx">
+        <span class="jiage" style="float:left">¥：{{item.price_yh}}</span>
+        <span class="xiaoliang" style="float:right">销量：{{item.shiyong}}</span>  
+      </view>
+  </navigator>
+</view>
+<view class="clear mt10" bindtap="getMore" style="display:{{productData==''?'none':'block'}}">点击查看更多</view>
+
+</view>
+<view class="lll">
+    <image src="../../images/kf.png"> <contact-button></contact-button>  <contact-button></contact-button></image>
+</view>
+
+  <!--logo  -->
+ <view style="text-align:center;margin-top:50rpx;margin-bottom:20rpx;">
+  <image src="http://www.gzleren.com/website/img/logo/logo.png" 
+
+style="width:35rpx;height:35rpx;vertical-align: middle;margin-right:10rpx;"></image>
+  <text style="font-size:26rpx;font-family:'方正舒体';color:#676767;">乐仁</text>
+  <view style="font-size:22rpx;font-family:'黑体';color:#999999;margin-top:10rpx;">技术支持@ 乐仁
+
+科技</view>
+  <!-- <image src="http://gzleren.com/wechat.png" style="width:200rpx;height:200rpx;margin-top:35rpx;"></image> -->
+</view> 

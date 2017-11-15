@@ -1,0 +1,24 @@
+<view class="container">
+ 
+   <view class="classname">
+
+
+  <form bindsubmit="edituser">      
+         <view class="xing" wx:if="{{userinfo.shopname}}">所属店铺:{{userinfo.shopname}}
+         </view>   
+         <view class="xing">手机号码：
+           <input placeholder-class='placeholder'  placeholder='请输入手机号码'  class="in" name='tel' value="{{userinfo.tel}}" />
+         </view>
+         <view class="xing">邮箱：
+           <input placeholder-class='placeholder'  placeholder='请输入邮箱'  class="in" name='email' value="{{userinfo.email}}" />
+         </view>
+         <view class="xing">昵称：
+           <input placeholder-class='placeholder'  placeholder='请输入你的昵称'  type='text' class="in" name='uname' value="{{userinfo.uname}}" />
+         </view>
+
+<button type=""    
+   form-type="submit" hover-class='button-hover' class='su'>保存</button>
+   </form>   
+   </view>
+
+</view> 

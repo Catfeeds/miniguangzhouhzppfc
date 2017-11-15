@@ -1,0 +1,83 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/order/detail",
+    "pages/status/status",
+    "pages/product/detail",
+    "pages/search/search",
+    "pages/user/user",
+    "pages/user/shoucang",
+    "pages/user/dingdan",
+    "pages/user/tuihuo",
+    "pages/order/pay",
+    "pages/brand/brand",
+    "pages/order/downline",
+    "pages/cart/cart",
+    "pages/listdetail/listdetail",
+    "pages/dangtian/dangtian",
+    "pages/address/address",
+    "pages/address/user-address/user-address",
+    "pages/panic/panic",
+    "pages/category/index",
+    "pages/ritual/ritual",
+    "pages/rituall/rituall",
+    "pages/shop/shop",
+    "pages/shop_store/shop_store",
+    "pages/rzshop/rzshop",
+    "pages/settled/settled",
+    "pages/set/set",
+    "pages/userinfo/userinfo",
+    "pages/myshop/myshop",
+    "pages/addbrand/addbrand",
+    "pages/shopmanage/shopmanage",
+    "pages/promanage/promanage",
+    "pages/promanage/setqg",
+    "pages/examine/examine",
+    "pages/renzheng/renzheng",
+    "pages/name/name",
+    "pages/real_name/real_name",
+    "pages/rzqiye/rzqiye",
+    "pages/shopmanage/shoppwd",
+    "pages/order/shoperDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#5574fc",
+    "navigationBarTitleText": "广州化妆品批发城",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#dd2727",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/shou.png",
+        "selectedIconPath": "images/shouu.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "iconPath": "images/shoo.png",
+        "selectedIconPath": "images/shooo.png",
+        "text": "商铺"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "images/car.png",
+        "selectedIconPath": "images/gouu.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/icon-user.png",
+        "selectedIconPath": "images/icon-user-active.png",
+        "text": "我的"
+      }
+    ]
+  }
+}
